@@ -1,7 +1,7 @@
 <template>
   <div class="index-page">
     <div class="markdown">
-      <MarkdownEditor v-model="editorText" :text="editorText"/>
+      <MarkdownEditor v-model="editorText" :text="editorText" />
       <MarkdownPreview :preview="previewMarked" />
     </div>
   </div>
@@ -32,12 +32,13 @@ export default {
   },
   methods: {
     ...mapMutations("markdown", { setDocuments: "SET_DOCUMENTS" }),
+    ...mapMutations("layout", { setDarkMode: "SET_DARK_MODE" }),
   },
   computed: {
     ...mapState("markdown", { storeCurrentDocument: "currentDocument" }),
     previewMarked() {
-      return marked(this.editorText)
-    }
+      return marked(this.editorText);
+    },
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="menu-btn">
+    <div @click="toogleMenuState()" class="menu-btn">
       <img src="@/assets/icons/icon-menu.svg" alt="" />
     </div>
     <img class="logo" src="@/assets/logo.svg" alt="" />
@@ -27,7 +27,15 @@
   </header>
 </template>
 
-<style lang="scss" scoped>
+<script>
+import { mapMutations } from "vuex";
+export default {
+  methods: {
+    ...mapMutations("layout", { toogleMenuState: "TOOGLE_MENU_STATE" }),
+  },
+};
+</script>
+<style lang="scss" s coped>
 header {
   @include flex;
   background-color: $color-800;

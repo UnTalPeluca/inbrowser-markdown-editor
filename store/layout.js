@@ -8,14 +8,15 @@ export const mutations = {
   SET_DARK_MODE(state, value) {
     state.darkMode = value;
   },
-  SET_MENU_STATE(state, value) {
-    state.isMenuOpen = value;
+  TOOGLE_DARK_MODE(state) {
+    state.darkMode = !state.darkMode;
+  },
+  TOOGLE_MENU_STATE(state) {
+    state.isMenuOpen = !state.isMenuOpen;
   },
   SET_PREVIEW_STATE(state, value) {
-    state.showPreview = value
-  }
+    state.showPreview = value;
+  },
 };
 
-export const actions = {
-	
-};
+export const actions = {};

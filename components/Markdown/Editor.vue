@@ -43,6 +43,7 @@ export default {
   @include flex;
   flex-direction: column;
   height: calc(100vh - $header-sm);
+  width: 100%;
   @media screen and (min-width: 768px) {
     display: block;
     width: 50%;
