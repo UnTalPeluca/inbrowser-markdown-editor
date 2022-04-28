@@ -1,0 +1,43 @@
+@mixin heading-m {
+  font-family: $family-normal;
+  font-size: 15px;
+}
+@mixin heading-s {
+  font-family: $family-normal !important;
+  font-weight: bold !important;
+  letter-spacing: 2px !important;
+  font-size: 14px !important;
+}
+@mixin body-s {
+  font-family: $family-normal;
+  font-size: 13px;
+  font-weight: lighter;
+}
+@mixin body-m {
+  font-family: $family-normal;
+  font-size: 13px;
+  font-weight: lighter;
+}
+@mixin preview {
+  font-family: $family-slab;
+  font-size: 14px;
+}
+@mixin preview-bold {
+  font-family: $family-slab;
+  font-weight: bold;
+  font-size: 14px;
+}
+@mixin markdown-code {
+  font-family: $family-mono;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+@mixin center {
+  display: grid;
+  place-items: center;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
