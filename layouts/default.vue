@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout" :class="isDarkMode ? 'dark-mode' : ''">
+  <div class="default-layout">
     <Menu />
     <div class="page-wrapper" :class="isMenuOpen ? 'menu-open' : ''">
       <Header />
@@ -14,7 +14,7 @@ import { mapState } from "vuex";
 
 export default {
   computed: {
-    ...mapState("layout", ["isMenuOpen", "isDarkMode"]),
+    ...mapState("layout", ["isMenuOpen"]),
   },
 };
 </script>

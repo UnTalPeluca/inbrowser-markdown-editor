@@ -15,6 +15,15 @@ import { marked } from "marked";
 export default {
   async asyncData({ store }) {
     const storage = window.localStorage;
+    // Set theme
+    if (storage.getItem("darkMode") === null) {
+      storage.setItem("darkMode", "true");
+    }
+    store.commit(
+      "layout/SET_DARK_MODE",
+      JSON.parse(storage.getItem("darkMode"))
+    );
+    // Set documents
     let documents = JSON.parse(storage.getItem("documents"));
     let editorText;
     if (documents && documents.length > 0) {
@@ -28,9 +37,6 @@ export default {
     }
     editorText = documents.length ? documents[0].content : "";
     return { editorText };
-  },
-  methods: {
-    ...mapMutations("layout", { setDarkMode: "SET_DARK_MODE" }),
   },
   computed: {
     ...mapState("markdown", ["currentDocument"]),

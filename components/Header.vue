@@ -5,6 +5,7 @@
       <img v-else src="@/assets/icons/icon-menu.svg" alt="" />
     </div>
     <img class="logo" src="@/assets/logo.svg" alt="" />
+    <hr class="desktop-divider">
     <div class="action-bar">
       <div class="action-bar__document">
         <img src="@/assets/icons/icon-document.svg" alt="" />
@@ -79,6 +80,15 @@ header {
   .logo {
     display: none;
     @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
+  .desktop-divider {
+    display: none;
+    width: 1px;
+    height: 40px;
+    background-color: $color-600;
+    @media screen and (min-width: 1280px) {
       display: block;
     }
   }

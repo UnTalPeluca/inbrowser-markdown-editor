@@ -4,13 +4,10 @@ export default {
 
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
-  router: {
-    base: '/inbrowser-markdown-editor/'
-  },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "inbrowser-markdown-editor",
+    title: "Markdown Editor",
     htmlAttrs: {
       lang: "en",
     },

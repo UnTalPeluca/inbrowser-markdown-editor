@@ -8,9 +8,11 @@ export const state = () => ({
 export const mutations = {
   SET_DARK_MODE(state, value) {
     state.isDarkMode = value;
+    localStorage.setItem("darkMode", state.isDarkMode)
   },
   TOOGLE_DARK_MODE(state) {
     state.isDarkMode = !state.isDarkMode;
+    localStorage.setItem("darkMode", state.isDarkMode)
   },
   TOOGLE_MENU_STATE(state) {
     state.isMenuOpen = !state.isMenuOpen;
