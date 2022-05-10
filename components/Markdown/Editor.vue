@@ -106,9 +106,8 @@ export default {
     &::-webkit-scrollbar {
       width: 6px;
     }
-    /* Track */
     &::-webkit-scrollbar-track {
-      background-color: $color-900; 
+      background-color: $color-300; 
       border-radius: 12px;
     }
     /* Handle */
@@ -118,7 +117,7 @@ export default {
     }
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background-color: $color-700; 
+      background-color: $color-600; 
     }
     @media screen and (min-width: 768px) {
       display: block;
@@ -139,6 +138,18 @@ export default {
     }
     .editor__textarea {
       color: $color-400;
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background-color: $color-900; 
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-500;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $color-700; 
+      }
     }
   }
 }

@@ -1,69 +1,52 @@
-# inbrowser-markdown-editor
+# Frontend Mentor - In-browser markdown editor solution
 
-## Build Setup
+This is a solution to the [In-browser markdown editor challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/inbrowser-markdown-editor-r16TrrQX9). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-```bash
-# install dependencies
-$ npm install
+## Table of contents
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+## Overview
 
-# generate static project
-$ npm run generate
-```
+### The challenge
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+Users should be able to:
 
-## Special Directories
+- Create, Read, Update, and Delete markdown documents
+- Name and save documents to be accessed as needed
+- Edit the markdown of a document and see the formatted preview of the content
+- View a full-page preview of the formatted content
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+### Screenshot
 
-### `assets`
+![](./screenshot.jpg)
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+### Links
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/markdown-editor-with-vue-HyboGRvL5)
+- Live Site URL: [Netlify](https://peaceful-kashata-f74fa0.netlify.app/)
 
-### `components`
+## My process
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+### Built with
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- Vuejs 3
+- Nuxt
+- Sass
 
-### `layouts`
+## Author
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
-
-
-### `pages`
-
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
-
-### `plugins`
-
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
-
-### `static`
-
-This directory contains your static files. Each file inside this directory is mapped to `/`.
-
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+- Website - [GitHub](https://github.com/UnTalPeluca)
+- Frontend Mentor - [@UnTalPeluca](https://www.frontendmentor.io/profile/untalpeluca)

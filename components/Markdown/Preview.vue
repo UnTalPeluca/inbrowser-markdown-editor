@@ -113,9 +113,8 @@ export default {
     &::-webkit-scrollbar {
       width: 6px;
     }
-    /* Track */
     &::-webkit-scrollbar-track {
-      background-color: $color-900; 
+      background-color: $color-300; 
       border-radius: 12px;
     }
     /* Handle */
@@ -125,7 +124,7 @@ export default {
     }
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background-color: $color-700; 
+      background-color: $color-600; 
     }
     &:focus {
       outline: none;
@@ -262,6 +261,17 @@ export default {
       }
       code {
         color: $color-100;
+      }
+    &::-webkit-scrollbar-track {
+        background-color: $color-900; 
+      }
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-500;
+      }
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $color-700; 
       }
     }
   }
