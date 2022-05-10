@@ -1,41 +1,52 @@
 <template>
-  <header>
+  <header :class="isDarkMode ? 'dark-mode' : ''">
     <div @click="toogleMenuState()" class="menu-btn">
-      <img src="@/assets/icons/icon-menu.svg" alt="" />
+      <img v-if="isMenuOpen" src="@/assets/icons/icon-close.svg" alt="" />
+      <img v-else src="@/assets/icons/icon-menu.svg" alt="" />
     </div>
     <img class="logo" src="@/assets/logo.svg" alt="" />
-    <!------  Start action bar -------->
     <div class="action-bar">
       <div class="action-bar__document">
         <img src="@/assets/icons/icon-document.svg" alt="" />
         <div class="document__name">
-          <label class="name__title">Document Name</label>
-          <input value="welcome.md" />
+          <label for="Name" class="name__title">Document Name</label>
+          <input id="Name" @input="changeName($event.target.value)" :value="currentDocument ? currentDocument.name : ''" />
+          <div class="input__border-bottom"></div>
         </div>
       </div>
       <div class="action-bar__btns">
-        <div class="btn btn-delete">
+        <div @click="toogleDeleteState()" class="btn btn-delete">
           <img src="@/assets/icons/icon-delete.svg" alt="" />
         </div>
-        <div class="btn btn-save">
+        <div @click="saveChanges()" class="btn btn-save">
           <img src="@/assets/icons/icon-save.svg" alt="" />
           <span>Save Changes</span>
         </div>
       </div>
     </div>
-    <!------  End action bar -------->
   </header>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 export default {
+  computed: {
+    ...mapState("markdown", ["currentDocument"]),
+    ...mapState("layout", ["isDarkMode", "isMenuOpen"]),
+  },
   methods: {
-    ...mapMutations("layout", { toogleMenuState: "TOOGLE_MENU_STATE" }),
+    ...mapMutations("layout", {
+      toogleMenuState: "TOOGLE_MENU_STATE",
+      toogleDeleteState: "TOOGLE_DELETE_STATE",
+    }),
+    ...mapMutations("markdown", {
+      saveChanges: "SAVE_CHANGES",
+      changeName: "SET_CURRENT_DOCUMENT_NAME"
+    })
   },
 };
 </script>
-<style lang="scss" s coped>
+<style lang="scss">
 header {
   @include flex;
   background-color: $color-800;
@@ -50,9 +61,19 @@ header {
     min-width: $header-sm;
     background-color: $color-700;
     cursor: pointer;
+    transition: background-color 250ms linear;
+    &:hover {
+      background-color: $orange;
+    }
+    img {
+      width: 23px;
+    }
     @media screen and (min-width: 768px) {
       min-height: $header-md;
       min-width: $header-md;
+      img {
+        width: 30px;
+      }
     }
   }
   .logo {
@@ -65,11 +86,16 @@ header {
     @include flex;
     width: 100%;
     padding-right: 8px;
+    @media screen and (min-width: 768px) {
+      padding-right: 16px;
+    }
     .action-bar__document {
       @include flex;
       gap: 16px;
       .document__name {
         @include flex;
+        position: relative;
+        gap: 6px;
         @media screen and (min-width: 768px) {
           flex-direction: column;
         }
@@ -86,9 +112,29 @@ header {
           @include heading-m;
           background: transparent;
           color: white;
+          width: 150px;
+          caret-color: $orange;
           &:focus {
             outline: none;
+            + .input__border-bottom {
+              width: 150px;
+              @media screen and (min-width: 768px) {
+                width: 325px;
+              }
+            }
           }
+          @media screen and (min-width: 768px) {
+            width: 325px;
+          }
+        }
+        .input__border-bottom {
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+          transition: width 250ms ease;
+          width: 0px;
+          height: 1px;
+          background-color: $color-100;
         }
       }
     }
@@ -107,9 +153,21 @@ header {
           justify-content: space-between;
         }
         &.btn-delete {
+          img {
+            transition: transform 250ms ease;
+          }
+          &:hover {
+            img {
+              filter: $filter-orange;
+              transform: scale(1.1);
+            }
+          }
         }
         &.btn-save {
           background-color: $orange;
+          &:hover {
+            background-color: $light-orange;
+          }
           @media screen and (min-width: 768px) {
             min-width: 152px;
             padding: 0 16px;

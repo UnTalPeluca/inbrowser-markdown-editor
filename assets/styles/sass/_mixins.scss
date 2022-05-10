@@ -21,6 +21,7 @@
 @mixin preview {
   font-family: $family-slab;
   font-size: 14px;
+  line-height: 24px;
 }
 @mixin preview-bold {
   font-family: $family-slab;

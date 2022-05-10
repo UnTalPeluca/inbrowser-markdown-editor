@@ -19,5 +19,10 @@ $family-slab: "Roboto Slab", serif;
 $header-sm: 56px;
 $header-md: 72px;
 
-//Menu
 $menu-sm: 250px;
+
+$markdown-height-sm: calc(100vh - $header-sm);
+$markdown-height-md: calc(100vh - $header-md);
+
+$filter-orange: invert(52%) sepia(41%) saturate(3560%) hue-rotate(336deg) brightness(96%) contrast(85%);
+

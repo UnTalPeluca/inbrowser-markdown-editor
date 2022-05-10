@@ -1,35 +1,21 @@
 html {
-  color: $color-700;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+input,
+textarea,
+button {
+  border: none;
+}
+button {
+  cursor: pointer;
 }
 body {
   overflow-x: hidden;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $family-slab;
-  font-weight: bold;
-}
-h1 {
-  font-size: 32px;
-}
-h2 {
-  font-size: 28px;
-  font-weight: lighter;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 20px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 14px;
-  color: $orange;
+  height: 100%;
 }
