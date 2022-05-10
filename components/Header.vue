@@ -88,6 +88,7 @@ header {
     width: 1px;
     height: 40px;
     background-color: $color-600;
+    opacity: 0.25;
     @media screen and (min-width: 1280px) {
       display: block;
     }
