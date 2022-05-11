@@ -88,7 +88,7 @@ header {
     width: 1px;
     height: 40px;
     background-color: $color-600;
-    opacity: 0.25;
+    opacity: 0.5;
     @media screen and (min-width: 1280px) {
       display: block;
     }
@@ -106,7 +106,7 @@ header {
       .document__name {
         @include flex;
         position: relative;
-        gap: 6px;
+        gap: 2px;
         @media screen and (min-width: 768px) {
           flex-direction: column;
         }
@@ -162,6 +162,7 @@ header {
         @media screen and (min-width: 768px) {
           @include flex;
           justify-content: space-between;
+          gap: 6px;
         }
         &.btn-delete {
           img {
