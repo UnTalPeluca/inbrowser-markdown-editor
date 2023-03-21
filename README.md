@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/markdown-editor-with-vue-HyboGRvL5)
-- Live Site URL: [Netlify](https://peaceful-kashata-f74fa0.netlify.app/)
+- Live Site URL: [Netlify](https://markdown-editor-vue.netlify.app)
 
 ## My process
 
